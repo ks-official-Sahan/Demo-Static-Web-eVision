@@ -1,0 +1,225 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333;
+}
+
+.navbar a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+nav.navbar {
+    /* background: #333; */
+    /* background: transparent; */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.navbar ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav.navbar ul li a:hover {
+    color: #ffd700;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background-image: url('https://source.unsplash.com/random/1920x1080?business');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero .logo {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    background-color: #1e1e1e;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+section p,
+section .team-member p,
+section .service-item p,
+section .project p,
+section .testimonial p {
+    margin: 0.5rem 0;
+}
+
+.team-member img,
+.testimonial img {
+    border: 2px solid #333;
+}
+
+.team-member h3,
+.service-item h3,
+.project h3,
+.testimonial h3 {
+    margin: 0.5rem 0;
+}
+
+.stars {
+    color: gold;
+}
+
+.contact-us form {
+    display: grid;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #333;
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.team-member,
+.service-item,
+.project,
+.testimonial {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.team-member.animate,
+.service-item.animate,
+.project.animate,
+.testimonial.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member:hover,
+.service-item:hover,
+.project:hover,
+.testimonial:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Style for scroll and loading animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.team-member,
+.service-item,
+.project,
+.testimonial {
+    animation: fadeIn 1s ease-out forwards, slideUp 1s ease-out forwards;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: var(--bg-color);
+}
+
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--bg-color);
+}
+
+.bg-gray-800 {
+    background-color: var(--bg-color);
+}
+
+.dark .bg-gray-900 {
+    background-color: var(--dark-bg-color);
+}
+
+.dark .text-gray-100 {
+    color: var(--dark-text-color);
+}
+
+:root {
+    --bg-color: #333;
+    --text-color: #f9f9f9;
+}
+
+.dark {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+}
